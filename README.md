@@ -1,7 +1,13 @@
 # Marbling
 Takes .cpp file as input and makes a new file that 'marbles' the char array declarations. Overloads << operator in order to return the original, unmarbled contents.
 
-## How I did it
+Inspired by: https://wikileaks.org/ciav7p1/cms/page_14588467.html
+
+## Future plans
+  * Make it so a random obfuscation algorithm is chosen rather than having a single built in one
+  * Revamp with a simple cross-platform GUI using QT in order to provide a user friendly experience where you can select any files to be marbled rather than providing their path in a console application.
+
+## How it is done
   * Iteratively recreate the target file while using Regex to find and replace all of the character array declarations with MarbleString instantiations
   * The MarbleString object takes the original string content as a parameter and applies the marbling algorithm to it to produce an obfuscated string
   * In order to retrieve the original, unmarbled contents, I overloaded the << operator so that it undoes the marbling.
